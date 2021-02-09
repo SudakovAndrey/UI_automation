@@ -1,0 +1,3 @@
+rootProject.name = 'UI automation'
+include 'ui-Test'
+
