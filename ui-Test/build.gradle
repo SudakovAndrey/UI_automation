@@ -9,11 +9,19 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+test {
+    useTestNG()
 }
 
-test {
-    useJUnitPlatform()
+dependencies {
+//    compile project(":api-test")
+    compile group: 'com.codeborne', name: 'selenide', version: '5.18.0'
+    testCompile group: 'org.testng', name: 'testng', version: '7.3.0'
+    testCompile group: 'org.slf4j', name: 'slf4j-nop', version: '1.7.30'
+    testImplementation 'io.rest-assured:rest-assured:4.3.3'
+    compile group: 'io.qameta.allure', name: 'allure-selenide', version: '2.13.8'
+
 }
+
+
+
